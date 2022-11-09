@@ -1,0 +1,59 @@
+.header{
+
+    background-color: #C8B7A6;
+    position: sticky;
+    top:0;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: 14% 86%;
+    .logo{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        .image-logo{
+            display: flex;
+            justify-content: center;
+        }
+        .logo-write{
+            font-weight: 800;
+            font-size: 22px;
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    .navigation-and-user{
+        display: grid;
+        grid-template-columns: 90% 10%;
+        align-items: center;
+        .navigator{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            :nth-child(n){
+                background-color: transparent;
+                color: black;
+                font-weight: 400;
+                border: 3px solid black;
+                border-radius: 5px;
+                text-decoration: none;
+                margin-left: 20px;
+                padding: 0px 7px 0px 7px;
+                font-weight: 600;
+
+                
+            }
+
+            
+        }
+        .btn-logout{
+            background-color: transparent;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+
+    }
+
+}

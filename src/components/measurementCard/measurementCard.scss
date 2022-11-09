@@ -1,0 +1,60 @@
+.meas-card-container{
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    .meas-card{
+        padding: 5%;
+        height: fit-content;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .meas-card-name{
+            font-size: 25px;
+            font-weight: 500;
+            color: rgb(56, 56, 56);
+            display: flex;
+            flex-direction: row;
+            .ms{
+                font-weight: 700;
+            }
+        }
+        .rest-info-meas{
+            display:grid;
+            grid-template-rows: 1fr 1fr;
+            font-size: 20px;
+            font-weight: 500;
+            .meas-rest-row{
+                display: flex;
+                flex-direction: row;
+                .rs{
+                    color: rgb(56, 56, 56);
+                        font-weight: 700;
+                    }
+            }
+            
+
+            
+        }
+
+       .btn-zone-meas{
+        display: flex;
+        justify-content: space-around;
+        gap:25px;
+
+        .btn-zone-one{
+                background-color: transparent;
+                color: black;
+                font-weight: 400;
+                border: 2px solid black;
+                border-radius: 5px;
+                text-decoration: none;
+                padding: 7px 7px 7px 7px;
+                font-weight: 600;
+        }
+        }
+
+    }
+
+}
