@@ -14,6 +14,7 @@ const DevicePage = (): JSX.Element =>{
 
     const [showModal,setShowModal]= useState(false);
     const {devices,setDevices,getDevices} = useContext(DeviceContext);
+    console.log(devices);
     const user: UserDecoded = getUSerFromLocal("jwt");
     let helper=false;
      if(user.role==="ADMIN"){

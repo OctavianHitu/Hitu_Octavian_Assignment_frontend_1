@@ -16,7 +16,7 @@ const Header: React.FC<HeaderComponent> =(): JSX.Element =>{
 
      function logout(){
         navigate("/");
-        localStorage.clear();
+        sessionStorage.clear();
 
     }
 
@@ -37,6 +37,9 @@ const Header: React.FC<HeaderComponent> =(): JSX.Element =>{
                     <NavLink to="/measurementPage">MEASUREMENTS</NavLink>
                 </div>
                 <div>
+                <button className="btn-logout" onClick={()=>{
+                navigate("/chat")
+            }}>CHAT</button>
                 <button className="btn-logout" onClick={()=>{
                 logout();
             }}>LOG OUT</button>

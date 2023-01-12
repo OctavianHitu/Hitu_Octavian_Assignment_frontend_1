@@ -47,7 +47,7 @@ const UpdateForm: React.FC<UpdateFormComponent> = (props): JSX.Element => {
       name = statename;
     }
     if (statepassword) {
-      name = statepassword;
+      password = statepassword;
     }
     if (stateemail) {
       email = stateemail;

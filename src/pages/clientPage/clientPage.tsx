@@ -20,9 +20,11 @@ const ClientPage = (): JSX.Element =>{
         navigate("/userPage");
      }
 
+     console.log(user);
     const {devices,setDevices,getDevices} = useContext(DeviceContext);
      
     const devs: Device[]=[];
+    console.log("devices",devices)
     devices.forEach((dev:Device) => {
         if(dev.userEmail===user.email){
             devs.push(dev);
@@ -30,23 +32,28 @@ const ClientPage = (): JSX.Element =>{
         
     });
 
+    console.log(devs);
 
      function logout(){
         navigate("/");
-        localStorage.clear();
+        sessionStorage.clear();
 
     }
     return(
         <div>
             <div className="wl-us">
             Welcome , {user.email} !
+            <div>
+            <button onClick={()=>{
+                navigate("/chat")
+            }}>CHAT</button>
             <button onClick={()=>{
                 logout();
             }}>LOG OUT</button>
-            </div>
+            </div></div>
             {helper?
             <div className="clientPage-big">
-                {devices.map((dev:Device)=>{
+                {devs.map((dev:Device)=>{
                     return(
                         <DeviceCard key={dev.id} device={dev} isAdmin={false}/>
                     )

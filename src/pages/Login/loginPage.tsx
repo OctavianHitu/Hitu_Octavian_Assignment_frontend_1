@@ -17,7 +17,7 @@ const LoginPage =(): JSX.Element =>{
    async  function getLogin(event:any){
     event.preventDefault();
      const {data} = await getAxiosInstance().post("/login",JSON.stringify({email,password}));
-     localStorage.setItem("jwt",data);
+     sessionStorage.setItem("jwt",data);
 
      const user: UserDecoded = getUSerFromLocal("jwt");
 

@@ -7,7 +7,7 @@ id:string;
 }
 
 export function getUSerFromLocal(name: string) {
-  const jwt = localStorage.getItem(name || "");
+  const jwt = sessionStorage.getItem(name || "");
   const splitted = jwt ? jwt.split(",",3) : "";
   let user: UserDecoded = { email: "", role:"", id: "" };
   user.email=splitted[0];

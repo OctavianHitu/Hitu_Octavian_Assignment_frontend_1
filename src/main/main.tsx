@@ -10,6 +10,8 @@ import MeasurementPage from "../pages/measurementsPage/measurementPage";
 import UserPage from "../pages/userPage/userPage";
 import "./main.scss";
 
+import ChatRoom from "../pages/chat/Chat"
+
 const Main = () => {
   return (
     <div className="main">
@@ -23,6 +25,7 @@ const Main = () => {
               <Route path="/userPage" element={<UserPage />} />
               <Route path="/devicePage" element={<DevicePage />} />
               <Route path="/measurementPage" element={<MeasurementPage />} />
+              <Route path="/chat" element={<ChatRoom/>}/>
             </Routes>
           </UserProvider>
         </DeviceProvider>
